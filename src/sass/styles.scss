@@ -21,6 +21,9 @@
 	background-size: cover;
 	text-align: center;
 	position: relative;
+	&__image{
+		@extend %fwh;
+	}
 	&__title{
 		font-size: 35px;
 		font-weight: 700;
@@ -41,9 +44,6 @@
 .section{
 	padding-top: 30px;
 	padding-bottom: 30px;
-	&__title{
-		text-align: center;
-	}
 }
 
 /*list*/
@@ -86,12 +86,6 @@ ol.list{
 	}
 }
 
-/*image*/
-.fullwidth-img{
-	width: 100%;
-	height: auto;
-}
-
 /* title */
 .title{
 	font-size: 30px;
@@ -110,9 +104,8 @@ ol.list{
 		@include fch(t);
 	}
 	h3{
-		font-size: 18px;
 		font-weight: 700;
-		line-height: 1.5;
+		line-height: 1.3;
 		margin-top: 35px;
 		@include fch(t);
 	}
@@ -127,7 +120,8 @@ ol.list{
 .post{
 	&__thumb{
 		img{
-			@extend .fullwidth-img;
+			width: 100%;
+			height: auto;
 		}
 	}
 	&__tit{
@@ -138,5 +132,36 @@ ol.list{
 	&__exc{
 		font-size: 15px;
 		line-height: 1.5;
+	}
+}
+
+/* sidebar */
+.sidebar{
+	max-width: 260px;
+	flex-basis: 260px;
+	& > div{
+		background: $llgy;
+		padding: 15px;
+	}
+	&__tit{
+		font-size: 18px;
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+	p{
+		line-height: 1.5;
+		margin-top: 20px;
+		@include fch(t);
+	}
+	&__post{
+		margin-top: 20px;
+		&-tit{
+			line-height: 1.3;
+			margin-bottom: 10px;
+		}
+		&-exc{
+			font-size: 14px;
+			line-height: 1.5;
+		}
 	}
 }

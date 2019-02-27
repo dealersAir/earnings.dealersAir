@@ -7,9 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			fsElem.style.height = (window.innerHeight - padTop) +'px';
 		}
+
+		CoverImg.reInit('body');
 		
 		window.addEventListener('winResized', initFun);
 	})();
+
+	// cover images
+	CoverImg.init();
 
 	// init toggle button
 	Toggle.init('.js-toggle');

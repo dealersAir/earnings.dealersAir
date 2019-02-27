@@ -21,7 +21,7 @@ var modulesOn = [
 	// 'scrollsmooth',
 	'toggle',
 	// 'flex-image',
-	// 'cover-image',
+	'cover-image',
 	// 'video',
 	'popup',
 	// 'form/checkbox',
