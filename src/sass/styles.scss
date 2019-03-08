@@ -146,11 +146,13 @@ ol.list{
 	&__tit{
 		font-size: 18px;
 		font-weight: 700;
-		margin-bottom: 15px;
+		margin: 25px 0 15px;
+		@include fch(t);
 	}
 	p{
-		line-height: 1.5;
-		margin-top: 20px;
+		font-size: 14px;
+		line-height: 1.3;
+		margin: 15px 0;
 		@include fch(t);
 	}
 	&__post{
