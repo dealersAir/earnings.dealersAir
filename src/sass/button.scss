@@ -18,6 +18,7 @@
 	text-decoration: none;
 	vertical-align: bottom;
 	border: none;
+	border-radius: 3px;
 	background: $bk;
 	user-select: none;
 	position: relative;
@@ -46,19 +47,7 @@
 	}
 }
 
-//arrow btn
-.arrow-btn{
-	@extend %btn;
-	padding-right: 43px;
-	
-	&:after{
-		@extend %btn-icon;
-		width: 15px;
-		height: 16px;
-		right: 15px;
-		margin-top: -8px;
-	}
-}
+
 
 //down btn
 .down-btn{
@@ -112,8 +101,41 @@
 	}
 }
 
-.senler-btn{
-	border: none;
+// senler vk btn
+.sidebar .senler.senler-btn{
+	@extend %btn;
+	font-family: $ff;
+	padding-left: 43px;
+	background: $be5;
+	width: 100%;
+	&:after{
+		@extend %btn-icon;
+		width: 33px;
+		height: 26px;
+		left: 9px;
+		margin-top: -14px;
+	}
+	&:hover{
+		opacity: 0.7;
+	}
+}
+
+//telega btn
+.telegram-btn{
+	@extend %btn;
+	padding-left: 43px;
+	background: $be4;
+	width: 100%;
+	&:after{
+		@extend %btn-icon;
+		width: 27px;
+		height: 26px;
+		left: 10px;
+		margin-top: -14px;
+	}
+	&:hover{
+		opacity: 0.7;
+	}
 }
 
 /*link*/

@@ -5,22 +5,29 @@
 
 /*main*/
 .main{
+	flex: 1 0 auto;
+	position: relative;
+	overflow: hidden;
 	&, &__full-page{
 		padding-top: 60px;
 	}
 	&__full-page{
 		@extend %fwh;
 	}
+	&_fs{
+		padding-top: 100vh;
+	}
 }
 
 /* first screen */
 .first-screen{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
 	overflow: hidden;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: cover;
 	text-align: center;
-	position: relative;
 	&__image{
 		@extend %fwh;
 	}

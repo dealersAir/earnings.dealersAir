@@ -68,30 +68,6 @@ body {
   flex-direction: column;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 8;
-}
-
-@media (min-width: 1001px) {
-  header {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-main {
-  flex: 1 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-footer {
-  flex: 0 0 auto;
-}
-
 a:hover {
   text-decoration: none;
 }
@@ -798,7 +774,7 @@ hr {
   }
 }
 
-.btn, .arrow-btn, .down-btn, .plus-btn, .github-btn {
+.btn, .down-btn, .plus-btn, .github-btn, .sidebar .senler.senler-btn, .telegram-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -813,18 +789,19 @@ hr {
   text-decoration: none;
   vertical-align: bottom;
   border: none;
+  border-radius: 3px;
   background: #212121;
   user-select: none;
   position: relative;
   transition: .5s;
 }
 
-.btn span, .arrow-btn span, .down-btn span, .plus-btn span, .github-btn span {
+.btn span, .down-btn span, .plus-btn span, .github-btn span, .sidebar .senler.senler-btn span, .telegram-btn span {
   display: block;
   width: 100%;
 }
 
-.arrow-btn:after, .down-btn:after, .plus-btn:after, .github-btn:after {
+.down-btn:after, .plus-btn:after, .github-btn:after, .sidebar .senler.senler-btn:after, .telegram-btn:after {
   display: block;
   content: "";
   position: absolute;
@@ -837,17 +814,6 @@ hr {
 
 .btn_be:hover {
   background: #6699cc;
-}
-
-.arrow-btn {
-  padding-right: 43px;
-}
-
-.arrow-btn:after {
-  width: 15px;
-  height: 16px;
-  right: 15px;
-  margin-top: -8px;
 }
 
 .down-btn {
@@ -897,8 +863,39 @@ hr {
   background: #212121;
 }
 
-.senler-btn {
-  border: none;
+.sidebar .senler.senler-btn {
+  font-family: "Roboto", sans-serif;
+  padding-left: 43px;
+  background: #4a76a8;
+  width: 100%;
+}
+
+.sidebar .senler.senler-btn:after {
+  width: 33px;
+  height: 26px;
+  left: 9px;
+  margin-top: -14px;
+}
+
+.sidebar .senler.senler-btn:hover {
+  opacity: 0.7;
+}
+
+.telegram-btn {
+  padding-left: 43px;
+  background: #32afed;
+  width: 100%;
+}
+
+.telegram-btn:after {
+  width: 27px;
+  height: 26px;
+  left: 10px;
+  margin-top: -14px;
+}
+
+.telegram-btn:hover {
+  opacity: 0.7;
 }
 
 /*link*/
@@ -1007,14 +1004,19 @@ hr {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
   display: flex;
   height: 60px;
   align-items: center;
-  background: #FFF;
   transition: .21s;
 }
 
 .header_fixed {
+  background: #FFF;
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.21);
 }
 
@@ -1026,6 +1028,12 @@ hr {
 .header__logo img {
   width: 100%;
   height: auto;
+}
+
+@media (min-width: 1001px) {
+  .header {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (max-width: 1000px) {
@@ -1801,6 +1809,7 @@ hr {
 }
 
 .footer {
+  flex: 0 0 auto;
   background: #212121;
   color: #aaaaaa;
   padding: 15px 0;
@@ -1875,18 +1884,29 @@ hr {
 }
 
 /*main*/
+.main {
+  flex: 1 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
 .main, .main__full-page {
   padding-top: 60px;
 }
 
+.main_fs {
+  padding-top: 100vh;
+}
+
 /* first screen */
 .first-screen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
   text-align: center;
-  position: relative;
 }
 
 .first-screen__title {
@@ -2054,28 +2074,36 @@ ol.list li:before {
   line-height: 1.5;
 }
 
-.menu__arr, .down-btn:after, .att-icon::before, .github-btn:after, .form__btn_search:before {
+.menu__arr, .down-btn:after, .att-icon::before, .github-btn:after, .form__btn_search:before, .telegram-btn::after, .sidebar .senler.senler-btn::after {
   background: url("../images/sprite.svg") no-repeat;
 }
 
 .menu__arr {
-  background-position: 32.18142548596112% 35.56149732620321%;
+  background-position: 32.18142548596112% 33.333333333333336%;
 }
 
 .down-btn:after {
-  background-position: 0 71.12299465240642%;
+  background-position: 31.08433734939759% 66.66666666666667%;
 }
 
 .att-icon::before {
-  background-position: 0 35.56149732620321%;
+  background-position: 0 33.333333333333336%;
 }
 
 .github-btn:after {
-  background-position: 99.0453460620525% 71.12299465240642%;
+  background-position: 0 66.66666666666667%;
 }
 
 .form__btn_search:before {
   background-position: 100% 0;
+}
+
+.telegram-btn::after {
+  background-position: 96.2877030162413% 33.333333333333336%;
+}
+
+.sidebar .senler.senler-btn::after {
+  background-position: 37.34335839598997% 0;
 }
 
 /*sprites*/
@@ -2097,6 +2125,14 @@ ol.list li:before {
 
 .down-btn:after {
   background-size: 428.125% auto;
+}
+
+.telegram-btn::after {
+  background-size: 468.37607% auto;
+}
+
+.sidebar .senler.senler-btn::after {
+  background-size: 367.78523% auto;
 }
 
 
@@ -2194,6 +2230,11 @@ ol.list li:before {
 .p-x-0 {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+.p-y-30 {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
 }
 
 .p-y-0 {

@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	(function initFun() {
 		if (fsElem) {
-			let padTop = 60;
+			document.querySelector('.main_fs').style.paddingTop = window.innerHeight +'px';
 
-			fsElem.style.height = (window.innerHeight - padTop) +'px';
+			fsElem.style.height = window.innerHeight +'px';
 		}
 
 		CoverImg.reInit('body');

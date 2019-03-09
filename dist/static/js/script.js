@@ -957,7 +957,7 @@ var Anchor;
 		shift: 0,
 
 		scroll: function(anchorId, e) {
-			var anchorSectionElem = document.getElementById(anchorId +'-anchor');
+			const anchorSectionElem = document.getElementById(anchorId +'-anchor');
 
 			if (!anchorSectionElem) {
 				return;
@@ -967,8 +967,10 @@ var Anchor;
 				e.preventDefault();
 			}
 
-			var scrollTo = anchorSectionElem.getBoundingClientRect().top + window.pageYOffset,
-			scrollTo = scrollTo - this.shift;
+			let scrollTo = anchorSectionElem.getBoundingClientRect().top + window.pageYOffset,
+			ownShift = +anchorSectionElem.getAttribute('data-shift') || 0;
+			
+			scrollTo = scrollTo - this.shift - ownShift;
 
 			animate(function(progress) {
 				window.scrollTo(0, ((scrollTo * progress) + ((1 - progress) * window.pageYOffset)));

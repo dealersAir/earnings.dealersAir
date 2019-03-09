@@ -4,7 +4,7 @@
 
 %svg-angle-down {
 	@extend %svg-common;
-	background-position: 32.18142548596112% 35.56149732620321%;
+	background-position: 32.18142548596112% 33.333333333333336%;
 }
 
 %svg-angle-down-dims {
@@ -14,7 +14,7 @@
 
 %svg-arrow-alt-circle-down {
 	@extend %svg-common;
-	background-position: 0 71.12299465240642%;
+	background-position: 31.08433734939759% 66.66666666666667%;
 }
 
 %svg-arrow-alt-circle-down-dims {
@@ -34,7 +34,7 @@
 
 %svg-check {
 	@extend %svg-common;
-	background-position: 0 100%;
+	background-position: 19.318181818181817% 94.10377358490567%;
 }
 
 %svg-check-dims {
@@ -44,7 +44,7 @@
 
 %svg-exclamation-triangle {
 	@extend %svg-common;
-	background-position: 0 35.56149732620321%;
+	background-position: 0 33.333333333333336%;
 }
 
 %svg-exclamation-triangle-dims {
@@ -54,7 +54,7 @@
 
 %svg-facebook {
 	@extend %svg-common;
-	background-position: 69.1415313225058% 35.56149732620321%;
+	background-position: 69.1415313225058% 33.333333333333336%;
 }
 
 %svg-facebook-dims {
@@ -64,7 +64,7 @@
 
 %svg-github {
 	@extend %svg-common;
-	background-position: 99.0453460620525% 71.12299465240642%;
+	background-position: 0 66.66666666666667%;
 }
 
 %svg-github-dims {
@@ -74,7 +74,7 @@
 
 %svg-odnoklassniki {
 	@extend %svg-common;
-	background-position: 28.72570194384449% 71.12299465240642%;
+	background-position: 0 100%;
 }
 
 %svg-odnoklassniki-dims {
@@ -84,7 +84,7 @@
 
 %svg-plus-circle {
 	@extend %svg-common;
-	background-position: 52.53012048192771% 71.12299465240642%;
+	background-position: 63.13253012048193% 66.66666666666667%;
 }
 
 %svg-plus-circle-dims {
@@ -102,9 +102,19 @@
 	height: 532px;
 }
 
+%svg-telegram {
+	@extend %svg-common;
+	background-position: 96.2877030162413% 33.333333333333336%;
+}
+
+%svg-telegram-dims {
+	width: 468px;
+	height: 532px;
+}
+
 %svg-twitter {
 	@extend %svg-common;
-	background-position: 100% 35.56149732620321%;
+	background-position: 100% 66.66666666666667%;
 }
 
 %svg-twitter-dims {
