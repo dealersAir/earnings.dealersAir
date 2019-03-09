@@ -1,27 +1,29 @@
 // global variables
-; var browser, ajax, animate;
+; var browser, elemIsHidden, ajax, animate;
 
 (function() {
-	"use strict";
-
+	'use strict';
+	
 	// Get useragent
 	document.documentElement.setAttribute('data-useragent', navigator.userAgent.toLowerCase());
-
+	
 	// Browser identify
 	browser = (function(userAgent) {
 		userAgent = userAgent.toLowerCase();
-
+		
 		if (/(msie|rv:11\.0)/.test(userAgent)) {
 			return 'ie';
+		} else if (/firefox/.test(userAgent)) {
+			return 'ff';
 		}
 	})(navigator.userAgent);
-
+	
 	// Add support CustomEvent constructor for IE
 	try {
 		new CustomEvent("IE has CustomEvent, but doesn't support constructor");
 	} catch (e) {
 		window.CustomEvent = function(event, params) {
-			var evt;
+			var evt = document.createEvent("CustomEvent");
 
 			params = params || {
 				bubbles: false,
@@ -29,45 +31,53 @@
 				detail: undefined
 			};
 
-			evt = document.createEvent("CustomEvent");
-
 			evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
-
+			
 			return evt;
 		}
-
+		
 		CustomEvent.prototype = Object.create(window.Event.prototype);
 	}
-
+	
 	// Window Resized Event
-	var winResizedEvent = new CustomEvent('winResized'),
-	rsz = true;
+	const winResizedEvent = new CustomEvent('winResized'),
+	winWidthResizedEvent = new CustomEvent('winWidthResized');
 
+	let rsz = true,
+	beginWidth = window.innerWidth;
+	
 	window.addEventListener('resize', function() {
 		if (rsz) {
 			rsz = false;
-
+			
 			setTimeout(function() {
 				window.dispatchEvent(winResizedEvent);
+				
+				if (beginWidth != window.innerWidth) {
+					window.dispatchEvent(winWidthResizedEvent);
+
+					beginWidth = window.innerWidth
+				}
+
 				rsz = true;
 			}, 1021);
 		}
 	});
-
+	
 	// Closest polyfill
 	if (!Element.prototype.closest) {
 		(function(ElProto) {
 			ElProto.matches = ElProto.matches || ElProto.mozMatchesSelector || ElProto.msMatchesSelector || ElProto.oMatchesSelector || ElProto.webkitMatchesSelector;
-
+			
 			ElProto.closest = ElProto.closest || function closest(selector) {
 				if (!this) {
 					return null;
 				}
-
+				
 				if (this.matches(selector)) {
 					return this;
 				}
-
+				
 				if (!this.parentElement) {
 					return null;
 				} else {
@@ -76,32 +86,28 @@
 			};
 		})(Element.prototype);
 	}
-
+	
 	// Check element for hidden
-	Element.prototype.elementIsHidden = function() {
-		var elem = this;
-
+	elemIsHidden = function(elem) {
 		while (elem) {
 			if (!elem) break;
-
-			var compStyle = getComputedStyle(elem);
-
-			if (compStyle.display == 'none' || compStyle.visibility == 'hidden' || compStyle.opacity == '0') {
-				return true;
-			}
-
+			
+			const compStyle = getComputedStyle(elem);
+			
+			if (compStyle.display == 'none' || compStyle.visibility == 'hidden' || compStyle.opacity == '0') return true;
+			
 			elem = elem.parentElement;
 		}
-
+		
 		return false;
 	}
-
+	
 	// Ajax
 	ajax = function(options) {
-		var xhr = new XMLHttpRequest();
-
+		const xhr = new XMLHttpRequest();
+		
 		xhr.open('POST', options.url);
-
+		
 		if (typeof options.send == 'string') {
 			xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		}
@@ -113,38 +119,36 @@
 				options.error(xhr.response);
 			}
 		}
-
+		
 		xhr.send(options.send);
 	}
-
+	
 	/*
 	Animation
 	animate(function(takes 0...1) {}, Int duration in ms[, Str easing[, Fun animation complete]]);
 	*/
 	animate = function(draw, duration, ease, complete) {
-		var start = performance.now();
-
+		const start = performance.now();
+		
 		requestAnimationFrame(function anim(time) {
-			var timeFraction = (time - start) / duration;
-
+			let timeFraction = (time - start) / duration;
+			
 			if (timeFraction > 1) {
 				timeFraction = 1;
 			}
-
-			var progress = (ease) ? easing(timeFraction, ease) : timeFraction;
-
-			draw(progress);
-
+			
+			draw((ease) ? easing(timeFraction, ease) : timeFraction);
+			
 			if (timeFraction < 1) {
 				requestAnimationFrame(anim);
 			} else {
-				if (complete != undefined) {
+				if (complete !== undefined) {
 					complete();
 				}
 			}
 		});
 	}
-
+	
 	function easing(timeFraction, ease) {
 		switch (ease) {
 			case 'easeInQuad':
@@ -161,7 +165,7 @@
 			}
 		}
 	}
-
+	
 	function quad(timeFraction) {
 		return Math.pow(timeFraction, 2)
 	}
