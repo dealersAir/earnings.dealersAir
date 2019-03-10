@@ -19,10 +19,9 @@
 	}
 	&__logo{
 		display: inline-block;
-		width: 180px;
+		width: 215px;
 		img{
-			width: 100%;
-			height: auto;
+			@extend %fw-img;
 		}
 	}
 	@media(min-width: 1001px){

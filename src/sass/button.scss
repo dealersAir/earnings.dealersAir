@@ -147,22 +147,15 @@
 		border-bottom-color: transparent;
 	}
 }
+
 .link{
 	@extend %link;
 	color: $be;
 	border-bottom-color: $be;
-}
-.light-link{
-	@extend %link;
-	color: $be2;
-	border-bottom-color: $be2;
-	&_dash{
-		border-bottom-style: dashed;
-	}
 	&_rev{
 		border-bottom-color: transparent;
 		&:hover{
-			border-bottom-color: $be2;
+			border-bottom-color: $be;
 		}
 	}
 }

@@ -5,9 +5,9 @@ abstract class Core {
 
 	public function __construct($options = array()) {
 		$db = DbConnect::getInstance();
-		$this->_db = $db->getDb();
-		$this->_opt = $options;
-		$this->run();
+		$this -> _db = $db -> getDb();
+		$this -> _opt = $options;
+		$this -> run();
 	}
 }
 ?>

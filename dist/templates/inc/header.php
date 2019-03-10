@@ -3,9 +3,11 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
    <link rel="stylesheet" href="/static/css/style.css">
+   <link rel="canonical" href="https://earnings.dealersair.com/<?php echo $content -> url; ?>">
    <title><?php echo $meta['title']; ?> — Dealers Air Info</title>
+   <meta name="description" content="<?php echo $meta['description']; ?>">
    <!-- favicon/ -->
  
    <!-- /favicon -->
@@ -15,7 +17,7 @@
    <header id="header" class="header">
       <div class="row row_wrp row_col-middle header__row">
          <div class="col p-y-0">
-            <a href="/" class="header__logo"><img src="/static/images/info-dealersair.svg" alt="iNFO.dealersAir"></a>
+            <a href="/" class="header__logo"><img src="/static/images/earnings-dealersair.svg" alt="Dealers Air Earnings"></a>
          </div>
          <div class="col col_grow p-y-0">
             <div class="row row_col-middle">

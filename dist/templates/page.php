@@ -16,11 +16,11 @@ include $_SERVER['DOCUMENT_ROOT'] .'/templates/inc/header.php';
 					<div class="col-12 pos-r zi-2">
 						<h1 class="first-screen__title"><?php echo $content -> title; ?></h1>
 						<div class="first-screen__sub-tit">
-                     <?php echo $content -> excerpt; ?>
+                     <?php echo $content -> description; ?>
 						</div>
 					</div>
 					<div class="first-screen__image cover-img-wrap">
-						<img src="<?php echo $content -> thumb['url']; ?>" alt="<?php echo $content -> thumb['alt']; ?>" class="cover-img">
+						<img src="/uploads/<?php echo $content -> image['url']; ?>" alt="<?php echo $content -> image['alt']; ?>" class="cover-img">
 					</div>
 					<div class="first-screen__bottom">
 						<button data-anchor-id="start" class="js-anchor down-btn"></button>
