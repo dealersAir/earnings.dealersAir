@@ -37,7 +37,7 @@ $sprite-width: 2192;
 	@include bgs(468);
 }
 
-.sidebar .senler.senler-btn::after{
+.vk-subscr-btn.senler.senler-btn::after{
 	@extend %svg-vk;
 	@include bgs(596);
 }

@@ -102,7 +102,7 @@
 }
 
 // senler vk btn
-.sidebar .senler.senler-btn{
+.vk-subscr-btn.senler.senler-btn{
 	@extend %btn;
 	font-family: $ff;
 	padding-left: 43px;
@@ -119,6 +119,7 @@
 		opacity: 0.7;
 	}
 }
+
 
 //telega btn
 .telegram-btn{
