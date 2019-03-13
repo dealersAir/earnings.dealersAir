@@ -13,7 +13,7 @@ include $_SERVER['DOCUMENT_ROOT'] .'/templates/inc/header.php';
 		<main class="col-12">
 			<article>
 				<div id="js-first-screen" class="first-screen row row_col-middle">
-					<div class="col-12 pos-r zi-2">
+					<div class="first-screen__head col col_center">
 						<h1 class="first-screen__title"><?php echo $content -> title; ?></h1>
 						<div class="first-screen__sub-tit">
                      <?php echo $content -> description; ?>

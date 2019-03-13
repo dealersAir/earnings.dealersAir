@@ -12,7 +12,7 @@ include $_SERVER['DOCUMENT_ROOT'] .'/templates/inc/header.php';
 		
 		<main class="col-12 p-0">
          <div id="js-first-screen" class="first-screen row row_col-middle">
-            <div class="col-12 pos-r zi-2">
+            <div class="first-screen__head col col_center">
                <h1 class="first-screen__title">Как зарабатывать онлайн</h1>
                <div class="first-screen__sub-tit">
                   Как начать зарабатывать в интернете. Мифы и реальность интернет-заработка.

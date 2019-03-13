@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			fsElem.style.height = window.innerHeight +'px';
 		}
 
-		CoverImg.reInit('body');
+		CoverImg.reInit('.first-screen');
 		
 		// resize events
 		window.removeEventListener('winResized', initFun);
@@ -53,21 +53,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		showOnce: true
 	});
 
-	// popup init
-	Popup.init('.js-open-popup');
-	MediaPopup.init('.js-open-media-popup');
+	// // senler
+	// const senScr = document.createElement('script');
+	// // senScr.async = true;
+	// senScr.src = '//senler.ru/dist/web/js/senler.js?3';
 
-	// get content via Ajax
-	var getCont = new GetContentAjax({
-		eventBtn: '.js-get-content-ajax',
-		event: 'click',
-		outputDiv: '#output-ajax',
-		sourceFile: '/get-content-ajax.php'
-	});
+	// senScr.onload = function() {
+	// 	console.log(Senler);
+	// 	try {Senler.ButtonSubscribe("senlerBtn-1552070183");} catch (e) {console.log(e);}
+	// 	try {Senler.ButtonSubscribe("senlerBtn-1552070184");} catch (e) {console.log(e);}
+	// }
 
-	getCont.output = function (response) {
-		var result = response.match(/\<div id\="source"\>([\s\S]*?)\<\/div\>/);
-
-		return result[1];
-	}
+	// document.head.appendChild(senScr);
 });

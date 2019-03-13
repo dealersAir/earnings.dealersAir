@@ -28,6 +28,11 @@
 	height: 100vh;
 	overflow: hidden;
 	text-align: center;
+	&__head{
+		position: relative;
+		z-index: 2;
+		background: $whop;
+	}
 	&__image{
 		@extend %fwh;
 	}
