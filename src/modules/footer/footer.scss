@@ -36,8 +36,10 @@
 			@include fch(t);
 		}
 	}
-	@media(max-width: 1200px){
-		
+	@media(max-width: 750px){
+		&__txt{
+			font-size: 13px;
+		}
 	}
 }
 

@@ -164,7 +164,14 @@
 		&-hidden{
 			display: none !important;
 		}
-
+		&-pt{
+			&-30{
+				padding-top: 30px !important;
+			}
+			&-0{
+				padding-top: 0 !important;
+			}
+		}
 		&-p{
 			&-x{
 				&-15{
@@ -213,6 +220,11 @@
 	.xs{
 		&-hidden{
 			display: none !important;
+		}
+		&-pt{
+			&-0{
+				padding-top: 0 !important;
+			}
 		}
 	}
 }

@@ -17,7 +17,7 @@
             Подпишитесь, чтоб не пропустить выход новых статей.
          </p>
          <p>
-            <script src="//senler.ru/dist/web/js/senler.js"></script><script>try {Senler.ButtonSubscribe("senlerBtn-1552070183");} catch (e) {console.log(e);}</script><button id="senlerBtn-1552070183" data-vk_group_id="178119674" data-subscription_id="248822" data-text="Подписаться Вконтакте" data-alt_text="" class="vk-subscr-btn"></button>
+            <button id="senlerBtn-1552070183" data-vk_group_id="178119674" data-subscription_id="248822" data-text="Подписаться Вконтакте" data-alt_text="" class="vk-subscr-btn"></button>
          </p>
          <p>
             <a rel="nofollow" href="https://t.me/earnings_dealersAir" target="_blank" class="telegram-btn">Подписаться в&nbsp;Telegram</a>
