@@ -6,7 +6,7 @@
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
    <link rel="stylesheet" href="/static/css/style.css">
    <link rel="canonical" href="https://earnings.dealersair.com/<?php echo $content -> url; ?>">
-   <title><?php echo $meta['title']; ?> — Dealers Air Info</title>
+   <title><?php echo $meta['title']; ?> — Dealers Air Earnings</title>
    <meta name="description" content="<?php echo $meta['description']; ?>">
    <!-- favicon/ -->
    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">

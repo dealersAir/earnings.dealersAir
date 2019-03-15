@@ -1,4 +1,2 @@
-User-agent: *
-Disallow: /
 Host: https://earnings.dealersair.com
 Sitemap: https://earnings.dealersair.com/sitemap.xml
