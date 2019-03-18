@@ -13,6 +13,8 @@ function loadClasses($class_name) {
 
 spl_autoload_register('loadClasses');
 
+setcookie('d_air_interest', 'internet_earnings', time() + 31104000, '/', 'dealersair.com');
+
 // get content
 if (!empty($_GET['route'])) {
 	$url = trim(htmlspecialchars(strip_tags($_GET['route'])));

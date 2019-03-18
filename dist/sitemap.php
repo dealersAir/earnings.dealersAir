@@ -16,7 +16,7 @@ spl_autoload_register('loadClasses');
 // new sitemap
 $conf = array(
 	'base' => 'https://'. $_SERVER['HTTP_HOST'],
-	'excl' => array('css', 'html')
+	'excl' => array()
 );
 
 $smap = new SitemapXML($conf);
