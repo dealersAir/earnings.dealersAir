@@ -28,7 +28,6 @@
 		transform: translate3d(0, 0, 0);
 	}
 	@media(max-width: 1000px){
-		height: 60px;
 		&__row{
 			position: fixed;
 			top: 60px;
@@ -45,9 +44,9 @@
 			}
 		}
 		&__logo{
-			width: 75px;
+			width: 155px;
 			position: fixed;
-			top: 10px;
+			top: 18px;
 			left: 15px;
 		}
 	}
@@ -98,7 +97,7 @@
 		}
 	}
 	@media(max-width: 1000px){
-		display: block;
+		// display: block;
 	}
 }
 

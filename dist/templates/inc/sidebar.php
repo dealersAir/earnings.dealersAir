@@ -4,10 +4,10 @@
          <h2>Анонс</h2>
          <div class="sidebar__post">
             <h3>
-               <a rel="nofollow" href="/kak-zarabatyvat-na-partnerskih-programmah" class="link">Партнерские программы</a>
+               <a rel="nofollow" href="/kak-zarabatyvat-na-partnerskih-programmah/sozdaem-vitrinu-tovarov" class="link">Витрина товаров</a>
             </h3>
             <p>
-               Как зарабатывать на&nbsp;партнерских программах. Какие партнерки выбрать, чтоб начать зарабатывать.
+               Создаем витрину товаров для заработка на партнерских программах.
             </p>
          </div>
       </div>

@@ -18,9 +18,9 @@
 				Анонс
 			</div>
 			<div class="footer__txt">
-				<h2><a rel="nofollow" href="/kak-zarabatyvat-na-partnerskih-programmah" class="link">Партнерские программы</a></h2>
+				<h2><a rel="nofollow" href="/kak-zarabatyvat-na-partnerskih-programmah/sozdaem-vitrinu-tovarov" class="link">Витрина товаров</a></h2>
 				<p>
-					Как зарабатывать на&nbsp;партнерских программах. Какие партнерки выбрать, чтоб начать зарабатывать.
+					Создаем витрину товаров для заработка на партнерских программах.
 				</p>
 			</div>
 		</div>

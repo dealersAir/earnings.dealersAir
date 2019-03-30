@@ -108,6 +108,7 @@
 	padding-left: 43px;
 	background: $be5;
 	width: 100%;
+	box-sizing: border-box;
 	&:after{
 		@extend %btn-icon;
 		width: 33px;
