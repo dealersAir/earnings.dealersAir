@@ -7,7 +7,7 @@ class SitemapXML extends Core {
 	}
 	
 	private function fetchContent() {
-		$cont = $this -> _db -> prepare('SELECT * FROM coding_content');
+		$cont = $this -> _db -> prepare('SELECT * FROM content');
 		$cont -> execute();
 		return $cont -> fetchAll(PDO::FETCH_OBJ);
 	}
@@ -25,7 +25,7 @@ class SitemapXML extends Core {
 		
 		// pages
 		foreach ($content as $val) {
-			if (!in_array($val -> url, $this -> _opt['excl'])) {
+			if ($val -> modified && !in_array($val -> url, $this -> _opt['excl'])) {
 				$url = $this -> _xml -> addChild('url');
 				$url -> addChild('loc', $this -> _opt['base'] .'/'. $val -> url);
 				$url -> addChild('lastmod', explode(' ', $val -> modified)[0]);

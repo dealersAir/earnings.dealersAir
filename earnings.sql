@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.3
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1:3306
--- Время создания: Мар 14 2019 г., 18:34
--- Версия сервера: 5.6.37
--- Версия PHP: 7.0.21
+-- Хост: localhost:3306
+-- Время создания: Мар 18 2019 г., 15:58
+-- Версия сервера: 5.6.43
+-- Версия PHP: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `earnings`
+-- База данных: `lufter21_earnings`
 --
 
 -- --------------------------------------------------------
@@ -89,7 +89,8 @@ ALTER TABLE `subscribers`
 -- AUTO_INCREMENT для таблицы `subscribers`
 --
 ALTER TABLE `subscribers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
