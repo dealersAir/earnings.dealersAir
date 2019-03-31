@@ -26,6 +26,24 @@ include $_SERVER['DOCUMENT_ROOT'] .'/templates/inc/header.php';
             </div>
          </div>
          <div id="start-anchor" data-shift="30" data-sm-shift="0" class="sm-pt-30">
+
+            <article class="post row">
+               <div class="col-4">
+                  <div class="post__thumb">
+                  <a rel="nofollow" href="/kak-zarabatyvat-na-partnerskih-programmah"><img src="/uploads/partnerskaya-programma.jpg" alt="Заработок в интернете"></a>
+                  </div>
+               </div>
+               <div class="col-8 xs-pt-0">
+                  <h2 class="post__tit"><a href="/kak-zarabatyvat-na-partnerskih-programmah" class="link link_rev">Как зарабатывать на партнерских программах</a></h2>
+                  <p class="post__exc">
+                     Подключаемся к партнерским программам. Регистрация в сети Admitad.
+                  </p>
+                  <p class="post__date">
+                     31.03.2019
+                  </p>
+               </div>
+            </article>
+
             <article class="post row">
                <div class="col-4">
                   <div class="post__thumb">
@@ -42,6 +60,7 @@ include $_SERVER['DOCUMENT_ROOT'] .'/templates/inc/header.php';
                   </p>
                </div>
             </article>
+
          </div>
       </main>
       

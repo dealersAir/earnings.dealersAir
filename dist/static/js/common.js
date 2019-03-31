@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const fsElem = document.getElementById('js-first-screen');
+	var fsElem = document.getElementById('js-first-screen');
 
 	(function initFun() {
 		if (fsElem) {
-			document.querySelector('.main_fs').style.paddingTop = window.innerHeight +'px';
+			document.querySelector('.main_fs').style.paddingTop = window.innerHeight + 'px';
 
-			fsElem.style.height = window.innerHeight +'px';
+			fsElem.style.height = window.innerHeight + 'px';
 		}
 
 		CoverImg.reInit('.first-screen');
-		
+
 		// resize events
 		window.removeEventListener('winResized', initFun);
 		window.removeEventListener('winWidthResized', initFun);
@@ -27,9 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// init toggle button
 	Toggle.init('.js-toggle');
 
-	Toggle.onChange = function (tgl, state) {
-
-	}
+	Toggle.onChange = function (tgl, state) {};
 
 	// menu
 	if (window.innerWidth < 1000) {
