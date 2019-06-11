@@ -152,12 +152,12 @@
 
 .link{
 	@extend %link;
-	color: $be;
-	border-bottom-color: $be;
+	color: $be2;
+	border-bottom-color: $be2;
 	&_rev{
 		border-bottom-color: transparent;
 		&:hover{
-			border-bottom-color: $be;
+			border-bottom-color: $be2;
 		}
 	}
 }

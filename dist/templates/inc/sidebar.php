@@ -1,27 +1,15 @@
 <aside class="sidebar col col_grow">
    <div>
       <div class="sidebar__section">
-         <h2>Анонс</h2>
-         <div class="sidebar__post">
-            <h3>
-               <a rel="nofollow" href="/kak-zarabatyvat-na-partnerskih-programmah/sozdaem-vitrinu-tovarov" class="link">Витрина товаров</a>
-            </h3>
-            <p>
-               Создаем витрину товаров для заработка на партнерских программах.
-            </p>
-         </div>
+         <h2 class="sidebar__tit">Читайте также:</h2>
+         <ul class="sidebar__ul">
+            <?php foreach ($all_posts as $post) { ?>
+            <li class="sidebar__li">
+               <a href="/<?php echo $post->url; ?>" class="link link_rev"><?php echo $post->meta_title; ?></a>
+            </li>
+            <?php } ?>
+         </ul>
       </div>
-      <div class="sidebar__section">
-         <h2>Подписаться</h2>
-         <p class="mt-8">
-            Подпишитесь, чтоб не пропустить выход новых статей.
-         </p>
-         <p>
-            <button id="senlerBtn-1552070183" data-vk_group_id="178119674" data-subscription_id="248822" data-text="Подписаться Вконтакте" data-alt_text="" class="vk-subscr-btn"></button>
-         </p>
-         <p>
-            <a rel="nofollow" href="https://t.me/earnings_dealersAir" target="_blank" class="telegram-btn">Подписаться в&nbsp;Telegram</a>
-         </p>
-      </div>
+      
    </div>
 </aside>

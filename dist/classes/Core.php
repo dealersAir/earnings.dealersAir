@@ -1,13 +1,14 @@
 <?php
-abstract class Core {
+abstract class Core
+{
 	protected $_db;
 	protected $_opt;
 
-	public function __construct($options = array()) {
+	public function __construct($options = array())
+	{
 		$db = DbConnect::getInstance();
-		$this -> _db = $db -> getDb();
-		$this -> _opt = $options;
-		$this -> run();
+		$this->_db = $db->getDb();
+		$this->_opt = $options;
+		$this->run();
 	}
 }
-?>
