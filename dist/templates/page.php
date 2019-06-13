@@ -8,7 +8,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/templates/inc/header.php';
 
 <!--MAIN/-->
 <div class="main">
-
 	<div class="row row_wrp row_md-x-nw">
 
 		<main class="col-12 sm-p-0">
